@@ -5,21 +5,21 @@
 class Nimotsu < Formula
   desc "CLI tool to track packages in Japan 📦"
   homepage "https://arrow2nd.com/works/nimotsu"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.0.0/nimotsu_1.0.0_Darwin_arm64.tar.gz"
-      sha256 "7a6a06f41092157bb7cdee92eed8371ebf7883b1b15231956420b78f7d28248b"
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.1.0/nimotsu_1.1.0_Darwin_arm64.tar.gz"
+      sha256 "0910eed96af9a54e2ef878be20f2f0546a551cca6c19e99d6ec76bdde737734a"
 
       def install
         bin.install "nimotsu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.0.0/nimotsu_1.0.0_Darwin_x86_64.tar.gz"
-      sha256 "1527b55844555ea660023849a10d7acb454c63dde8a895aafa591d5c1bd00c2e"
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.1.0/nimotsu_1.1.0_Darwin_x86_64.tar.gz"
+      sha256 "92745bed868062860fe389e2738dc40d3e549886401e2255ecd6e414252c8dd8"
 
       def install
         bin.install "nimotsu"
@@ -28,17 +28,17 @@ class Nimotsu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.0.0/nimotsu_1.0.0_Linux_x86_64.tar.gz"
-      sha256 "306b4fb41e0bcda39c6f0c61c060aaddb67a8f4ac831dfb0722888bb1cce1405"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.1.0/nimotsu_1.1.0_Linux_arm64.tar.gz"
+      sha256 "f96d62ce1032e57d43d625a1dd95e3d1996ad22d441f9a7f9aab3890824bb366"
 
       def install
         bin.install "nimotsu"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.0.0/nimotsu_1.0.0_Linux_arm64.tar.gz"
-      sha256 "0768ea7a59656fa80c7f4fa90d009fdc2d7b0ec7e4aab90de1476476b3249b2f"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.1.0/nimotsu_1.1.0_Linux_x86_64.tar.gz"
+      sha256 "823d1f02b4672f79b8010680cd35a8671f0f60fd477a9e2ba5caad742fde32d9"
 
       def install
         bin.install "nimotsu"
