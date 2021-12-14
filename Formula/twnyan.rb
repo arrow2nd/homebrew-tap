@@ -5,21 +5,21 @@
 class Twnyan < Formula
   desc "Twitter client for Terminal🐾"
   homepage "https://arrow2nd.com/works/twnyan"
-  version "1.7.0"
+  version "1.7.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.0/twnyan_1.7.0_Darwin_x86_64.tar.gz"
-      sha256 "5b1bb87b78edb53aac8d992433ffe6892ffdd79b421721244be5e2f60c948429"
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.1/twnyan_1.7.1_Darwin_x86_64.tar.gz"
+      sha256 "4696c205a8fcd6cd7f002d38492e0f21a070772d285c4aa6660117f374c2a527"
 
       def install
         bin.install "twnyan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.0/twnyan_1.7.0_Darwin_arm64.tar.gz"
-      sha256 "8c0175b9e6717cccd21241b6d3b0d97e6321abce5912e8e8eb0042bed5da24e1"
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.1/twnyan_1.7.1_Darwin_arm64.tar.gz"
+      sha256 "764d6f956c8dae9c84c7553a5fa5bb4e249e261b815a46a4d0c760a0dcdc3ca6"
 
       def install
         bin.install "twnyan"
@@ -29,16 +29,16 @@ class Twnyan < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.0/twnyan_1.7.0_Linux_x86_64.tar.gz"
-      sha256 "a204d88498b98b3660f447502a659ed6b8134830c83990d2b16ffc81f6c1bfe2"
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.1/twnyan_1.7.1_Linux_x86_64.tar.gz"
+      sha256 "41d132123e7db9ce60919f677e092c6361ae512f93dc5cc1f95ba4adc5a3677f"
 
       def install
         bin.install "twnyan"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.0/twnyan_1.7.0_Linux_arm64.tar.gz"
-      sha256 "26e34f95d1c18231bbdcc65cb978a4090b42b89b4070f001a055ec9c65646935"
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.7.1/twnyan_1.7.1_Linux_arm64.tar.gz"
+      sha256 "a5c8aaf82a8bb7442b2375e88574dd0b429a3c0e05b37f3ab1ade01743616f86"
 
       def install
         bin.install "twnyan"
