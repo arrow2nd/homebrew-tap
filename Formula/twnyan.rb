@@ -5,21 +5,21 @@
 class Twnyan < Formula
   desc "Twitter client for Terminal🐾"
   homepage "https://arrow2nd.com/works/twnyan"
-  version "1.8.2"
+  version "1.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.8.2/twnyan_1.8.2_Darwin_x86_64.tar.gz"
-      sha256 "f4c0b1568c3195ec8318abbcba00009805216b92ddb8098008e7f6c784bd05a4"
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.9.0/twnyan_1.9.0_Darwin_x86_64.tar.gz"
+      sha256 "1b8198102778fb1c96335579cebe43eabe88e06068d6810ff98513266fbf27ad"
 
       def install
         bin.install "twnyan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.8.2/twnyan_1.8.2_Darwin_arm64.tar.gz"
-      sha256 "3a115ff212331c663d03b044b95a90d7b991fd98a65b14deb2a42f3b64f7d983"
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.9.0/twnyan_1.9.0_Darwin_arm64.tar.gz"
+      sha256 "13cd40777d8b3b0dd61a37181e0239fc23c97e08cde80407cc3871825fb2ede5"
 
       def install
         bin.install "twnyan"
@@ -28,17 +28,17 @@ class Twnyan < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.8.2/twnyan_1.8.2_Linux_arm64.tar.gz"
-      sha256 "dba0ed6df09e67ca24e472ae6163d4607f6f85b157a0794e2d4b5214575a7b48"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.9.0/twnyan_1.9.0_Linux_x86_64.tar.gz"
+      sha256 "c54ec03a96d07f53b12032a0aad71812de8b044162d89cfa4613588b22ee8acc"
 
       def install
         bin.install "twnyan"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/twnyan/releases/download/v1.8.2/twnyan_1.8.2_Linux_x86_64.tar.gz"
-      sha256 "7a66dcb4dbc8029ef167c4b0a69447a5dd3fbfbffd9dbae605b6cf3a03d60c96"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arrow2nd/twnyan/releases/download/v1.9.0/twnyan_1.9.0_Linux_arm64.tar.gz"
+      sha256 "9ce4ee58e66ab258f5f1a7d9943c773741933a207f0580710a539f3d4843ca78"
 
       def install
         bin.install "twnyan"
