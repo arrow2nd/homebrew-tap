@@ -5,21 +5,21 @@
 class Codic < Formula
   desc "Unofficial CLI client of codic"
   homepage "https://arrow2nd.com/works/codic-cli"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.0/codic-cli_1.1.0_Darwin_x86_64.tar.gz"
-      sha256 "faddb4aa2c07dd1a56a6b3164495165ad5c320a74d291e6de2fa58b4c386583f"
+      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.1/codic-cli_1.1.1_Darwin_x86_64.tar.gz"
+      sha256 "58f1bc3416bef57ec417728171fbcf79fba7dedd5a1ea34c07467bc9d5d759a0"
 
       def install
         bin.install "codic"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.0/codic-cli_1.1.0_Darwin_arm64.tar.gz"
-      sha256 "26c3a919a37911bf990c040749517bd633d8eac0173654941d9a5ff6b869e29e"
+      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.1/codic-cli_1.1.1_Darwin_arm64.tar.gz"
+      sha256 "b3f8e66d226881d506ea3b181a9527a5a5847f4d3afe2d3fe091e8175aac5d6d"
 
       def install
         bin.install "codic"
@@ -29,16 +29,16 @@ class Codic < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.0/codic-cli_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "daf39aafd1cefe01f4f435a6ab124de3a5dcd53baf812ee9c9d6b03281be25d9"
+      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.1/codic-cli_1.1.1_Linux_x86_64.tar.gz"
+      sha256 "11c279cbba34b669069ba752d59eb6eff0437a4ad1e17f957ec588835b7a745b"
 
       def install
         bin.install "codic"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.0/codic-cli_1.1.0_Linux_arm64.tar.gz"
-      sha256 "1f222a5ce26ee2f38c539f7bde2568273a7a76312122a0734cc0e38b33dafecd"
+      url "https://github.com/arrow2nd/codic-cli/releases/download/v1.1.1/codic-cli_1.1.1_Linux_arm64.tar.gz"
+      sha256 "95168b57018f5bb3ec1794d12ca955418ab48ba7eeabacc1f7089e4b46803b29"
 
       def install
         bin.install "codic"
