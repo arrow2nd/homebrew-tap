@@ -5,21 +5,21 @@
 class Nekome < Formula
   desc "TUI Twitter client 🐈"
   homepage "https://arrow2nd.com/works/nekome"
-  version "2.0.1"
+  version "2.0.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Darwin_x86_64.tar.gz"
-      sha256 "90b055d71b6aca35a30fd256dadab288ab99c06e41f14ae45be0d50eae8f967d"
+    if Hardware::CPU.arm?
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.2/nekome_2.0.2_Darwin_arm64.tar.gz"
+      sha256 "03efa49317d0b7f6b57b61a10d04b56bea1fe6f5d51b7d8b5f53c83abbd7f6fe"
 
       def install
         bin.install "nekome"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Darwin_arm64.tar.gz"
-      sha256 "8933f6ac5c3294ee05e987e8a14c924d68439f6b5f2a3ab2edb1ad6897bd628a"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.2/nekome_2.0.2_Darwin_x86_64.tar.gz"
+      sha256 "6e77551ee923c5bc7b37d38718ddc8e25851e2be66536c974b511c05dcf44c07"
 
       def install
         bin.install "nekome"
@@ -28,17 +28,17 @@ class Nekome < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Linux_arm64.tar.gz"
-      sha256 "1bc0e60c84ab74082fd1e6cc3e009b519265e62fdec99322555208f225f538f1"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.2/nekome_2.0.2_Linux_x86_64.tar.gz"
+      sha256 "89f0662da62027ff2cb94325c355624467239c63e40f93449e512760ccd55e29"
 
       def install
         bin.install "nekome"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Linux_x86_64.tar.gz"
-      sha256 "9a7c9a65af1b3081eeafd3c099fd875d1ba324233239ab1e193cf1585ec1bb3b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.2/nekome_2.0.2_Linux_arm64.tar.gz"
+      sha256 "9c5c401b5a7b2fbfd5735995590e8dc18b8e100d1518576cb1ce44d58bcf9dc1"
 
       def install
         bin.install "nekome"
