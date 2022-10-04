@@ -11,7 +11,7 @@ class Nekome < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Darwin_x86_64.tar.gz"
-      sha256 "bd33eb4aea25c5431d78cff9666ce6a7e706f322b8f60995bf0664d41cac399d"
+      sha256 "90b055d71b6aca35a30fd256dadab288ab99c06e41f14ae45be0d50eae8f967d"
 
       def install
         bin.install "nekome"
@@ -19,7 +19,7 @@ class Nekome < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Darwin_arm64.tar.gz"
-      sha256 "936053d5089f150807683b29f2ca3695c90b5c3dbb89191277c20415b9f32c0e"
+      sha256 "8933f6ac5c3294ee05e987e8a14c924d68439f6b5f2a3ab2edb1ad6897bd628a"
 
       def install
         bin.install "nekome"
@@ -28,17 +28,17 @@ class Nekome < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Linux_x86_64.tar.gz"
-      sha256 "b69ba7063a4226da4f5b95cb7f24b5aae60e211ce37000af1ccabf42bb4947b4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Linux_arm64.tar.gz"
+      sha256 "1bc0e60c84ab74082fd1e6cc3e009b519265e62fdec99322555208f225f538f1"
 
       def install
         bin.install "nekome"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Linux_arm64.tar.gz"
-      sha256 "f65ef7eb3b0a8dbc76647201da4039e3454fa2bd73e9f67ff2a5f1474db5db4c"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.1/nekome_2.0.1_Linux_x86_64.tar.gz"
+      sha256 "9a7c9a65af1b3081eeafd3c099fd875d1ba324233239ab1e193cf1585ec1bb3b"
 
       def install
         bin.install "nekome"
