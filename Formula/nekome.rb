@@ -5,21 +5,21 @@
 class Nekome < Formula
   desc "TUI Twitter client 🐈"
   homepage "https://arrow2nd.com/works/nekome"
-  version "2.0.8"
+  version "2.0.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.8/nekome_2.0.8_Darwin_x86_64.tar.gz"
-      sha256 "c590ca0c1fd8149001cf6d1f86e4811ce2470ea7a37f2663fb16ac9346bb2fbb"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.9/nekome_2.0.9_Darwin_x86_64.tar.gz"
+      sha256 "89f0a66cfd3af720d5b496833dec8aae5834d8053aaa85ea1a99a8e6fcd97800"
 
       def install
         bin.install "nekome"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.8/nekome_2.0.8_Darwin_arm64.tar.gz"
-      sha256 "e17b693213af88bebdbf42d51cb84f6b14b04a141e25c020a9495a652d49952e"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.9/nekome_2.0.9_Darwin_arm64.tar.gz"
+      sha256 "90c63a66a5dacce9fcfbe0a1b54305efd6b03286aba8f4ecfe49ca383c58d563"
 
       def install
         bin.install "nekome"
@@ -29,16 +29,16 @@ class Nekome < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.8/nekome_2.0.8_Linux_arm64.tar.gz"
-      sha256 "9004adc96e2f251e46d9b05f0088e9acf9ae59710a62240723aa7187918a7c99"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.9/nekome_2.0.9_Linux_arm64.tar.gz"
+      sha256 "6c712a68059b282c1f49454bef20862db66e48f8cd2d1bac261dc9b490570f29"
 
       def install
         bin.install "nekome"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.8/nekome_2.0.8_Linux_x86_64.tar.gz"
-      sha256 "60c871479baf94d71755b224950ea6c6e03bdf826c8e038820fe504eea1c0e71"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.0.9/nekome_2.0.9_Linux_x86_64.tar.gz"
+      sha256 "7e64bb8e1ece44c4cb387f30a3141a4abe7eea61988bcc821c4c3a04d5ea4c0a"
 
       def install
         bin.install "nekome"
