@@ -5,21 +5,21 @@
 class Nimotsu < Formula
   desc "CLI tool to tracking packages in Japan 📦"
   homepage "https://arrow2nd.com/works/nimotsu"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.0/nimotsu_1.3.0_Darwin_arm64.tar.gz"
-      sha256 "c78adeadb7664a165934df43cb78e34abfe67935ded8229a450ccb902549867f"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Darwin_x86_64.tar.gz"
+      sha256 "5a6b405615e97f7c646c73d3dcc498ce95d8190763bb1221268fc615ef90c843"
 
       def install
         bin.install "nimotsu"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.0/nimotsu_1.3.0_Darwin_x86_64.tar.gz"
-      sha256 "73931003759ab036cc0aef8f2ab812cb0884c999fafb3532cd1a32078274e039"
+    if Hardware::CPU.arm?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Darwin_arm64.tar.gz"
+      sha256 "3c17f333b86d082c0117187bfd8ba04f5a65e5a980936b56843b2300a8adf52b"
 
       def install
         bin.install "nimotsu"
@@ -28,17 +28,17 @@ class Nimotsu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.0/nimotsu_1.3.0_Linux_x86_64.tar.gz"
-      sha256 "19d094927c646144b5b477bc6c145a667bb71922b62c11ecdd83ef71822bda5d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Linux_arm64.tar.gz"
+      sha256 "015ffeb84d31e523c8d2a4f8ad72d681fee0d0d1d381ed171c16cf7ff9fc2aba"
 
       def install
         bin.install "nimotsu"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.0/nimotsu_1.3.0_Linux_arm64.tar.gz"
-      sha256 "b07cb4553228c0c785413eefa6be76aa4615ccef2c7eccb9e85fcc2d815aa1f4"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Linux_x86_64.tar.gz"
+      sha256 "a8e75ccef981b13970c7fb1eb6b34acbaa0f64d0ec0f8e8fd7d3a9ac0f8f7acb"
 
       def install
         bin.install "nimotsu"
