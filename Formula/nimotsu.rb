@@ -5,21 +5,21 @@
 class Nimotsu < Formula
   desc "CLI tool to tracking packages in Japan 📦"
   homepage "https://arrow2nd.com/works/nimotsu"
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Darwin_x86_64.tar.gz"
-      sha256 "5a6b405615e97f7c646c73d3dcc498ce95d8190763bb1221268fc615ef90c843"
+    if Hardware::CPU.arm?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Darwin_arm64.tar.gz"
+      sha256 "cfc87665b9ac7e451530bdd681a9e1ea58cb000156e629b070de12b963f3e036"
 
       def install
         bin.install "nimotsu"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Darwin_arm64.tar.gz"
-      sha256 "3c17f333b86d082c0117187bfd8ba04f5a65e5a980936b56843b2300a8adf52b"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Darwin_x86_64.tar.gz"
+      sha256 "7f59365f2df7e852a3a32ba669b8db54724bbaf477e20212e6fa33785341ac58"
 
       def install
         bin.install "nimotsu"
@@ -28,17 +28,17 @@ class Nimotsu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Linux_arm64.tar.gz"
-      sha256 "015ffeb84d31e523c8d2a4f8ad72d681fee0d0d1d381ed171c16cf7ff9fc2aba"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Linux_x86_64.tar.gz"
+      sha256 "12a4fd2e0a40b3ee62085867205ba054b026a3cbea9351e25f172e617d1d43b7"
 
       def install
         bin.install "nimotsu"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.1/nimotsu_1.3.1_Linux_x86_64.tar.gz"
-      sha256 "a8e75ccef981b13970c7fb1eb6b34acbaa0f64d0ec0f8e8fd7d3a9ac0f8f7acb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Linux_arm64.tar.gz"
+      sha256 "41e3465bb4a7b80e7244358ac6991ac93c7004c4e530b9c219f718c8be0c2cc1"
 
       def install
         bin.install "nimotsu"
