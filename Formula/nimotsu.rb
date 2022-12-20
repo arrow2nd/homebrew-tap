@@ -5,21 +5,21 @@
 class Nimotsu < Formula
   desc "CLI tool to tracking packages in Japan 📦"
   homepage "https://arrow2nd.com/works/nimotsu"
-  version "1.3.2"
+  version "1.3.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Darwin_arm64.tar.gz"
-      sha256 "cfc87665b9ac7e451530bdd681a9e1ea58cb000156e629b070de12b963f3e036"
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.3/nimotsu_1.3.3_Darwin_arm64.tar.gz"
+      sha256 "ecb423deab52753ca98224980c4e987df05cdfa350475675db91e6b04f04657d"
 
       def install
         bin.install "nimotsu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Darwin_x86_64.tar.gz"
-      sha256 "7f59365f2df7e852a3a32ba669b8db54724bbaf477e20212e6fa33785341ac58"
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.3/nimotsu_1.3.3_Darwin_x86_64.tar.gz"
+      sha256 "bedfcc6cb040b799035191317013c1f07c3ae72874380826cacdd37e23d39ea3"
 
       def install
         bin.install "nimotsu"
@@ -29,16 +29,16 @@ class Nimotsu < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Linux_x86_64.tar.gz"
-      sha256 "12a4fd2e0a40b3ee62085867205ba054b026a3cbea9351e25f172e617d1d43b7"
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.3/nimotsu_1.3.3_Linux_x86_64.tar.gz"
+      sha256 "97eb0692cfb429503f8184f245d77457ff54017c0415d9648496ac58b47a6bf0"
 
       def install
         bin.install "nimotsu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.2/nimotsu_1.3.2_Linux_arm64.tar.gz"
-      sha256 "41e3465bb4a7b80e7244358ac6991ac93c7004c4e530b9c219f718c8be0c2cc1"
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.3/nimotsu_1.3.3_Linux_arm64.tar.gz"
+      sha256 "6a2fc57da7b388c940b498ed438668207983c2408e44855bc70a449a84a81cf9"
 
       def install
         bin.install "nimotsu"
