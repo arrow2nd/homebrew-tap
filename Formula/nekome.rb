@@ -5,21 +5,21 @@
 class Nekome < Formula
   desc "TUI Twitter client 🐈"
   homepage "https://arrow2nd.com/works/nekome"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.0/nekome_Darwin_x86_64.tar.gz"
-      sha256 "5aee8ffdcecd7a56d17ea226b58d29c97ee846b2f5ad7ce66e71a1617b9818ce"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.1/nekome_Darwin_x86_64.tar.gz"
+      sha256 "cf6a0a698f96744c62cbdb1de01b61fe8a470b80feec98c48e9e8662049d7342"
 
       def install
         bin.install "nekome"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.0/nekome_Darwin_arm64.tar.gz"
-      sha256 "8c7892bf35059174ada3ebf89694b4aeb51dd2baebb7c8239e4d4a7041f692d6"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.1/nekome_Darwin_arm64.tar.gz"
+      sha256 "34c3c67d4a0e4566098c395cc293395c8541c7bf327f8cb0b18b2b02bc77a783"
 
       def install
         bin.install "nekome"
@@ -29,16 +29,16 @@ class Nekome < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.0/nekome_Linux_arm64.tar.gz"
-      sha256 "1252aa1cb453e65641fb509fcdfa17ffaf2d92bb82b6c9171a8ceaf7b6df1dcb"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.1/nekome_Linux_arm64.tar.gz"
+      sha256 "6b3684acac5924d62a0e72cd67b33aaa6dfd5bc24fdaf6e4b689f422e201b240"
 
       def install
         bin.install "nekome"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.0/nekome_Linux_x86_64.tar.gz"
-      sha256 "e49396a55e7a78a297444b26237766d801bf1101d82c425962a4364b666a6c79"
+      url "https://github.com/arrow2nd/nekome/releases/download/v2.2.1/nekome_Linux_x86_64.tar.gz"
+      sha256 "9fee8cb5ed15eafcbb4e487faba18d028baef1679e4453164b6e269c51526ff6"
 
       def install
         bin.install "nekome"
