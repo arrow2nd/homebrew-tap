@@ -5,21 +5,21 @@
 class Anct < Formula
   desc "📺 Unofficial CLI Client of Annict"
   homepage "https://arrow2nd.com/works/anct"
-  version "0.1.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/anct/releases/download/v0.1.0/anct_Darwin_x86_64.tar.gz"
-      sha256 "ba5a5c13aba54134d4f1178f72d16c9a935b3cca0a1e68f23fadf5e0369701cb"
+    if Hardware::CPU.arm?
+      url "https://github.com/arrow2nd/anct/releases/download/v1.0.0/anct_Darwin_arm64.tar.gz"
+      sha256 "cd575d649550e67bf673ebbb93586be4687c0ed1398c10c93b5661ddfd15aa03"
 
       def install
         bin.install "anct"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/anct/releases/download/v0.1.0/anct_Darwin_arm64.tar.gz"
-      sha256 "068545c71785329172ecb555d136dca4854295b842cad4ce4546aa8cb1214a32"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/anct/releases/download/v1.0.0/anct_Darwin_x86_64.tar.gz"
+      sha256 "73d3dec58be24305c3cbad2847b3f8845b7c40acd292ce2a5794b4baaeb54185"
 
       def install
         bin.install "anct"
@@ -29,16 +29,16 @@ class Anct < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/anct/releases/download/v0.1.0/anct_Linux_arm64.tar.gz"
-      sha256 "0d3f17455d48f6f415779e42f81deb2a52dbd7cd379253f4d1805170acfd7df5"
+      url "https://github.com/arrow2nd/anct/releases/download/v1.0.0/anct_Linux_arm64.tar.gz"
+      sha256 "f97ad30e8ae05284211b387f10a92bf63892881f2f302a29df1ca81663685935"
 
       def install
         bin.install "anct"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/anct/releases/download/v0.1.0/anct_Linux_x86_64.tar.gz"
-      sha256 "8788fe2b6f5e088aca2872f0c8408c8a548f034db144609f3b7bd5443707db4b"
+      url "https://github.com/arrow2nd/anct/releases/download/v1.0.0/anct_Linux_x86_64.tar.gz"
+      sha256 "06421e1b73fdfbf01c2702b4786a2b5eb302fe1455780182a28bd81fe6c6a873"
 
       def install
         bin.install "anct"
