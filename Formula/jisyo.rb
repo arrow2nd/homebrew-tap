@@ -5,21 +5,21 @@
 class Jisyo < Formula
   desc "📚 SKK辞書マネージャ"
   homepage "https://arrow2nd.com/works/jisyo"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.2/jisyo_Darwin_arm64.tar.gz"
-      sha256 "bb01683a56c348a59d4206630607123174fef6145f9d6b4d0eb721a25230e490"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.3/jisyo_Darwin_x86_64.tar.gz"
+      sha256 "3736f19749338623ddd30fa67e9d024b3c40523018996e71430aaa63600681d3"
 
       def install
         bin.install "jisyo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.2/jisyo_Darwin_x86_64.tar.gz"
-      sha256 "21f3d4bdc625e7bc5ba43d1fe034070523377755bdd6b45fc8a8f118ef297e78"
+    if Hardware::CPU.arm?
+      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.3/jisyo_Darwin_arm64.tar.gz"
+      sha256 "9929806d35cc70f7198d6c0bcacde645b6c0fadbea0bcef3e91ea9d5953f154f"
 
       def install
         bin.install "jisyo"
@@ -29,16 +29,16 @@ class Jisyo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.2/jisyo_Linux_arm64.tar.gz"
-      sha256 "d82d5eecdd59bb9debc6bfa90d1ea3c80c6f83f5d36b984434fdf42d505b6d6f"
+      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.3/jisyo_Linux_arm64.tar.gz"
+      sha256 "fda4b2601aebfe361eaf9dace9d6a9b52b375dcfb6cf735de20531dacd7a46d6"
 
       def install
         bin.install "jisyo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.2/jisyo_Linux_x86_64.tar.gz"
-      sha256 "bb9c2b1478b780c045843cfeffe1dbb3d3940e69f7e8a30505f737a89f40ce61"
+      url "https://github.com/arrow2nd/jisyo/releases/download/v0.0.3/jisyo_Linux_x86_64.tar.gz"
+      sha256 "b4d4a082de3a85d4e593a1d4d8a5abdbdf45b0c0945e72577e79cff10b9e5be2"
 
       def install
         bin.install "jisyo"
