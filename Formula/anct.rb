@@ -5,21 +5,21 @@
 class Anct < Formula
   desc "📺 Unofficial CLI Client of Annict"
   homepage "https://arrow2nd.com/works/anct"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/arrow2nd/anct/releases/download/v1.2.0/anct_Darwin_arm64.tar.gz"
-      sha256 "9861dabd655adf2eaff681c69fac18716dd497da2c29ed7a7af8267a74c1c2d5"
+      url "https://github.com/arrow2nd/anct/releases/download/v1.2.1/anct_Darwin_arm64.tar.gz"
+      sha256 "733f57bab03d41011a86b5de4a5d14334bdd79bb1becb2b8a4db19d38fcec282"
 
       def install
         bin.install "anct"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/anct/releases/download/v1.2.0/anct_Darwin_x86_64.tar.gz"
-      sha256 "4fcb06f503f538a540fe923f71460a193f4526110164c31ddfec40721186adf0"
+      url "https://github.com/arrow2nd/anct/releases/download/v1.2.1/anct_Darwin_x86_64.tar.gz"
+      sha256 "80ed8be8550c1fc90da35514d6056d400ac5f0e2da99204407c8cc056e098990"
 
       def install
         bin.install "anct"
@@ -29,16 +29,16 @@ class Anct < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arrow2nd/anct/releases/download/v1.2.0/anct_Linux_arm64.tar.gz"
-      sha256 "5742901cac0530d082cf80027c4cae9c951ab6ca831af9e60239cd13e0c73ecb"
+      url "https://github.com/arrow2nd/anct/releases/download/v1.2.1/anct_Linux_arm64.tar.gz"
+      sha256 "aa3dfc95353adfd141b37c96eb0aa7c367d731f174d3ac53b0fb999182280bd4"
 
       def install
         bin.install "anct"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrow2nd/anct/releases/download/v1.2.0/anct_Linux_x86_64.tar.gz"
-      sha256 "6a2b7d83537f90d221250dc3d374f804cfd02e7cf7e574e02cdd6727131320aa"
+      url "https://github.com/arrow2nd/anct/releases/download/v1.2.1/anct_Linux_x86_64.tar.gz"
+      sha256 "3d63a940f84ce939d8338b363ee77bc1498ef7f98c1fc5641f4845511b164fae"
 
       def install
         bin.install "anct"
