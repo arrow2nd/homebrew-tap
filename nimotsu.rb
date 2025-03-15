@@ -5,21 +5,21 @@
 class Nimotsu < Formula
   desc "CLI tool to tracking packages in Japan 📦"
   homepage "https://arrow2nd.com/works/nimotsu"
-  version "1.3.4"
+  version "1.3.5"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.4/nimotsu_Darwin_x86_64.tar.gz"
-      sha256 "fe9ce5e71d24b965783c1cfbfe7e693b2d1952f295bfe6601b32c5f0e5c72849"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.5/nimotsu_Darwin_x86_64.tar.gz"
+      sha256 "995fac715ae1dda9a8ffba6dc2ae282b60b79e6c576714ac1ad86fa918787b66"
 
       def install
         bin.install "anct"
       end
     end
-    on_arm do
-      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.4/nimotsu_Darwin_arm64.tar.gz"
-      sha256 "58dc0302779d019f6aca8032a2581d409be5caf2a0defa72bc5625a9fa79e636"
+    if Hardware::CPU.arm?
+      url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.5/nimotsu_Darwin_arm64.tar.gz"
+      sha256 "5a7b742a04e27da2b935edfd7eddadb62eac44cb31813a6ea1bc5ef39c485533"
 
       def install
         bin.install "anct"
@@ -28,20 +28,20 @@ class Nimotsu < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.4/nimotsu_Linux_x86_64.tar.gz"
-        sha256 "6fbac09534aab6d1663c1c90808f163188b5d1212ec56ad7833e570fae95218f"
+        url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.5/nimotsu_Linux_x86_64.tar.gz"
+        sha256 "8e7810164cd3eef61b45a22ca84d85248c4078b84ddc428866ad10f45c3cf06b"
 
         def install
           bin.install "anct"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.4/nimotsu_Linux_arm64.tar.gz"
-        sha256 "b02db69e0d76eae8f2d39d7b04ae8012ef5f873c9543d73772832925be454971"
+        url "https://github.com/arrow2nd/nimotsu/releases/download/v1.3.5/nimotsu_Linux_arm64.tar.gz"
+        sha256 "aef21d6b559e7f0ffb02e53f4b69e090e7f832e079283ea859023485c4eb12bb"
 
         def install
           bin.install "anct"
