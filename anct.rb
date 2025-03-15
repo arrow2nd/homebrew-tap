@@ -5,21 +5,21 @@
 class Anct < Formula
   desc "📺 Unofficial CLI Client of Annict"
   homepage "https://arrow2nd.com/works/anct"
-  version "1.3.5"
+  version "1.3.6"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/arrow2nd/anct/releases/download/v1.3.5/anct_Darwin_x86_64.tar.gz"
-      sha256 "5d6a6d3b603bcb765520490fa9b675dbb8fff25465d56ba9e319b459018d26f8"
+    if Hardware::CPU.intel?
+      url "https://github.com/arrow2nd/anct/releases/download/v1.3.6/anct_Darwin_x86_64.tar.gz"
+      sha256 "efd1d47e67fdee841884c47fe334e0386111013485a5d224b322fdcd10fb68a1"
 
       def install
         bin.install "anct"
       end
     end
-    on_arm do
-      url "https://github.com/arrow2nd/anct/releases/download/v1.3.5/anct_Darwin_arm64.tar.gz"
-      sha256 "e0d47a37c9a0b739df3967d941748123e85c31827c74d122cf367445cd2037eb"
+    if Hardware::CPU.arm?
+      url "https://github.com/arrow2nd/anct/releases/download/v1.3.6/anct_Darwin_arm64.tar.gz"
+      sha256 "ab7aed8d2e48fb3a5141874636b74d24e2876cd2ce4d500be1d9f00ab0181508"
 
       def install
         bin.install "anct"
@@ -28,20 +28,20 @@ class Anct < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/arrow2nd/anct/releases/download/v1.3.5/anct_Linux_x86_64.tar.gz"
-        sha256 "0a1626d651edfcd8541720146a274f77b7214283337bce50fff46ad4a832b132"
+        url "https://github.com/arrow2nd/anct/releases/download/v1.3.6/anct_Linux_x86_64.tar.gz"
+        sha256 "a33112e2a1e4a60f918ab675983e7c3c3b52ef877d2f01342955d2c7cfcfbc68"
 
         def install
           bin.install "anct"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/arrow2nd/anct/releases/download/v1.3.5/anct_Linux_arm64.tar.gz"
-        sha256 "91291038c19938508cd9af49f9d072d612eb94ebc0e2cd978236cf66f8f53c08"
+        url "https://github.com/arrow2nd/anct/releases/download/v1.3.6/anct_Linux_arm64.tar.gz"
+        sha256 "70dbda0e7717428f5d1b050e2198c09edc231d56107face8ba77ebb4c4a86468"
 
         def install
           bin.install "anct"
